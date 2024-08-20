@@ -1,4 +1,20 @@
 import sqlite3
+import csv
+
+#git init
+# git add
+# git commit -m "message "
+# copy paste from github repositry created above
+#  git remote add origin https://github.com/prabin03/Python-project.git
+# git push -u origin main
+
+# after changing file
+# git status # check what happens in the file
+# git diff
+# git add .
+# git commit -m "message "
+# git push origin
+
 def create_connection():
     try:
         conn = sqlite3.connect("users.sqlite")
@@ -44,7 +60,7 @@ def create_tables(conn):
     cur.execute(CREATE_USER_TABLES_QUERY)
     print("user table was created successfully.")
 
-import csv 
+ 
 
 def read_csv():
     users = []
@@ -118,7 +134,6 @@ COLUMNS = (
    "first_name", 
    "last_name",     
    "company_name", 
-   "address", 
    "city", 
    "county", 
    "state", 
